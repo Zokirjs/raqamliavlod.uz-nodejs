@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="http://raqamliavlod.uz/favicon.ico" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Raqamli Avlod IT Oromgohi" />
+        <link rel="apple-touch-icon" href="http://raqamliavlod.uz//logo192.png" />
+        <link rel="manifest" href="http://raqamliavlod.uz//manifest.json" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&amp;display=swap"
+            rel="stylesheet" />
+        <title>Raqamli Avlod</title>
+        <link href="http://raqamliavlod.uz/static/css/2.74523fea.chunk.css" rel="stylesheet" />
+        <link href="http://raqamliavlod.uz/static/css/main.3fd689a5.chunk.css" rel="stylesheet" />
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+</head>
+
+<body>
+
+    
+    <div class="register-main camp">
+        <form class="register-form load-anim" method="post" action="/form">
+            <h1 class="register-title">Raqamli Avlod</h1>
+            <p class="register-text">Respublika Musobaqasi ro'yxatdan o'tish</p>
+            <label class="register-label">
+                <div>
+                    <input type="text" name="name" placeholder="Ism familiya" required="" value="" />
+                </div>
+            </label>
+            <label class="register-label">
+                <div>
+                    <input type="email" name="email" placeholder="Elektron pochta" required="" value="" />
+                </div>
+            </label>
+            <label class="register-label">
+                <div>
+                    <input type="text" name="setactivityName" placeholder="O'qish yoki ish joyingiz" required=""
+                        value="" />
+                </div>
+            </label>
+            <select class="select" required="" name="for">
+                <option value="1" selected="">Yo'nalishni tanlang</option>
+                <option value="contest">Contest</option>
+                <option value="robo">Robototehnika (musobaqa)</option>
+            </select>
+            <label class="register-label">
+                <div>
+                    <h5 class="number-val" style="margin: 0px; padding: 10px 0px">
+                        +998
+                    </h5>
+                    <input class="mb-3 form-val" minlength="9" type="phone" name="tell" maxlength="9" placeholder="Telefon raqam"
+                        required="" value="" />
+                </div>
+            </label>
+            <div class="requirments">
+                
+            </div>
+            <button class="register-submit" type="submit">
+                Ro'yxatdan o'tish
+            </button>
+        <a href="https://raqamliavlod.uz" class="ads">
+            <div>
+                <h1 class="register-title">IT oromgohdan</h1>
+                <p class="register-text"> ro'yxatdan o'tish</p>
+            </div>
+        </a>
+        </form>
+        
+    </div>
+
+
+    <script>
+        var select = document.querySelector('.select')
+        var req = document.querySelector('.requirments')
+        select.onchange = () => {
+            if (select.value == 'robo') {
+                req.innerHTML = "Robototexnika labirint musobaqasida ishtirok etish uchun sizdan o'zingiz tomoningizdan yasalgan smart-car bilan 28-avgust kuni Toshkent shahridagi Muhammad al-Xorazmiy maktabiga kelishingiz talab etiladi. \n\n\n Soat 13:00dan 16:00gacha tayyorgarlik jarayoni. Musobaqa soat 16:00da boshlanadi."
+            }else if (select.value == "contest") {
+                
+                req.innerHTML = `
+                <label class="register-label">
+                    <div>
+                        <input type="password" minlength="8" name="password" placeholder="Parol o'ylab toping" required=""
+                            value="" />
+                    </div>
+                </label>
+                <p>Contestning 1-tur bosqichi 24-avgust kuni soat 12:00 - 17:00 oralig'ida bo'lib o'tadi.</p>`
+            }
+        }
+    </script>
+</body>
+
+</html>
