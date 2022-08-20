@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 const Model = require('./models/model')
-
+const PORT = process.env.PORT || 3000
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile)
 app.use('/static', express.static('static'))
@@ -42,4 +42,4 @@ app.post('/form', async (req,res) => {
 
 })
 
-app.listen(3000, console.log('Nodejs port:', 3000))
+app.listen(PORT, console.log('Nodejs port:', PORT))
